@@ -87,4 +87,16 @@ https://wildermuth.com/2019/04/08/Using-Vue-CLI-Inside-an-ASP-NET-Core-Project
 Setup Vue pages:
 1. Add folder `views` and `components`
 2. Add `HelloWorld.vue`in views
-3. 
+
+
+vue add axios
+Error cors:
+https://medium.com/js-dojo/how-to-deal-with-cors-error-on-vue-cli-3-d78c024ce8d3
+1. create `vue.config.js` next to `package.json`
+Contents:
+**module.exports = {
+  // options...
+    devServer: {
+        proxy: 'http://localhost:54259/',
+    }
+}**
