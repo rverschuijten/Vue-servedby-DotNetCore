@@ -1,6 +1,4 @@
 # VueCoreBaseApp
-# CoreWebApp
-CoreWebApp Tester
 
 
 
