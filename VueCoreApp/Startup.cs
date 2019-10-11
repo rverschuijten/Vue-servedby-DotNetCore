@@ -64,8 +64,9 @@ namespace VueCoreApp
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
                     spa.UseVueCli(npmScript: "serve", port:8080);
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
+
                 }
             });
         }
