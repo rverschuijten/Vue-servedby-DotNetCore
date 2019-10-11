@@ -9,11 +9,14 @@
             </footer>
         </blockquote>
         <div v-if="forecasts">
-            <div v-for="forecast in forecasts">
-                <span> Summary             {{forecast.summary}}</span><br />
+            <div v-for="forecast in forecasts" :key="forecast.id ">
+                <span> {{forecast.id}} Summary             {{forecast.summary}}</span><br />
                 <span> Date Formatted             {{forecast.dateFormatted}}</span><br />
                 <span>{{forecast.temperatureC}} Celcius</span>
             </div>
+        </div>
+        <div v-else>
+            Loading forecast...
         </div>
     </div>
 </template>

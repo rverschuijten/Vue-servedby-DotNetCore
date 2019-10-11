@@ -18,8 +18,9 @@ namespace VueCoreApp.Controllers
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 15).Select(index => new WeatherForecast
             {
+                Id = rng.Next(1,99999),
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
@@ -28,6 +29,7 @@ namespace VueCoreApp.Controllers
 
         public class WeatherForecast
         {
+            public int Id {get;set;}
             public string DateFormatted { get; set; }
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
